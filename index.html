@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta name="theme-color" content="#020617" />
+		<title>Solar System Explorer</title>
+		<link rel="stylesheet" href="style.css" />
+		<script src="script.js" defer></script>
+	</head>
+	<body>
+		<header>
+			<h1>SOLAR SYSTEM</h1>
+			<p>Explore the eight planets orbiting our Sun</p>
+		</header>
+
+		<main>
+			<section class="solar-system" aria-label="Interactive solar system">
+				<div class="system-controls" aria-label="Animation controls">
+					<button id="toggle-orbits" type="button" aria-pressed="false">Pause orbits</button>
+					<label for="speed-control">Speed</label>
+					<input id="speed-control" type="range" min="0.25" max="3" step="0.25" value="1" />
+					<output id="speed-output" for="speed-control">1x</output>
+				</div>
+				<div class="sun" aria-label="Sun"><span aria-hidden="true">&#9728;</span></div>
+				<div id="orbits" aria-label="Planets"></div>
+				<aside id="planet-detail" class="planet-detail" aria-live="polite"></aside>
+			</section>
+
+			<section class="planet-info" aria-labelledby="planet-heading">
+				<h2 id="planet-heading">Meet the planets</h2>
+				<div id="planet-cards" class="cards"></div>
+			</section>
+		</main>
+
+		<footer>
+			<p>Our solar neighborhood</p>
+			<p>Eight planets. One star. Countless things to discover.</p>
+		</footer>
+	</body>
+</html>
